@@ -40,7 +40,7 @@ const createSimpleVarianl = (select: string, selector: (s: string) => string): V
 
 const config = defineConfig({
   shortcuts: [
-    ['opas', 'transition-opacity hocus:opacity-60']
+    ['opas', 'transition-opacity hocus:opacity-60'],
   ],
   // WebStorm don't support unocss config, so theme put in tailwind.config.cjs
   theme: {
@@ -50,7 +50,7 @@ const config = defineConfig({
     ['content-fill', { content: '"\xa0"' }],
     ['c_', { content: '"\xa0"' }],
     [/^((min|max)-)?size-(\d+)(.+)?$/, ([matcher]) => {
-      const [type, sizePart] = matcher.split('size-');
+      const [type, sizePart] = matcher!.split('size-');
       if (!sizePart) return matcher;
       const sizeNum = Number(sizePart);
       const createRes = (width: any, height?: any) => ({ [`${type}width`]: width, [`${type}height`]: height ?? width });

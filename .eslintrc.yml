@@ -1,19 +1,20 @@
 env:
   browser: true
   es2021: true
-parser: astro-eslint-parser
+parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaFeatures:
     jsx: true
   ecmaVersion: latest
   sourceType: module
-  parser: '@typescript-eslint/parser'
 plugins:
   - '@typescript-eslint'
   - only-warn
 extends:
-  - 'plugin:@typescript-eslint/recommended'
   - 'plugin:astro/recommended'
+"overrides":
+  - files: ['*.astro']
+    parser: astro-eslint-parser
 rules:
   semi: [ 1, always ]
   no-multiple-empty-lines: [ 1, { max: 2, maxEOF: 0 } ]
