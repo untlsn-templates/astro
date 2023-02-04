@@ -1,0 +1,12 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "preserve",
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": ["./*"],
+      "$css": ["./assets/style/index.ts"]
+    }
+  }
+}

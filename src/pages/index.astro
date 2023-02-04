@@ -1,0 +1,17 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Nav from '~/components/Nav.astro';
+import '~/assets/style/move-right.css';
+---
+
+<Layout>
+  <div class="p-4 bg-[#0B1120] text-white min-h-screen gap-4 flex-(~ col) items-center justify-center">
+    <a
+      href="https://astro.build/"
+      class="text-4rem relative overflow-hidden opas rounded-lg before:(content-none w-full absolute h-1 inset-(l-0 b-0) bg-white move-right rounded-full)"
+    >
+			Hello Astro <i class="i-noto-rocket"></i>!
+    </a>
+    <Nav />
+  </div>
+</Layout>

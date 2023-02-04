@@ -1,0 +1,7 @@
+@keyframes move-right {
+    from { translate: -100% }
+    to { translate: 100% }
+}
+.before\:move-right:before {
+    animation: move-right 2s infinite ease-in-out;
+}
